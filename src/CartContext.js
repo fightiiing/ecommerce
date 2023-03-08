@@ -1,5 +1,5 @@
 import {createContext, useState} from 'react';
-import { productsArray, getProductData } from './productStore';
+import { getProductData } from './productStore';
 
 export const CartContext = createContext ({
     items: [],
@@ -68,7 +68,7 @@ export function CartProvider({children}) {
         setCartProducts(
             cartProducts =>
             cartProducts.filter(currentProduct => {
-                return currentProduct.id != id; 
+                return currentProduct.id !== id; 
             })
         )
     }
