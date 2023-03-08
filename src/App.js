@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavbarComponent from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,9 +6,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cancel from './pages/Cancel';
 import Store from './pages/Store';
 import Success from './pages/Success';
+import CartProvider from './CartContext';
 
 function App() {
   return (
+    <CartProvider>
     <Container>
     <NavbarComponent>
 
@@ -22,6 +23,7 @@ function App() {
     </Routes>
     </BrowserRouter>
     </Container>
+    </CartProvider>
   );
 }
 

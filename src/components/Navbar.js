@@ -16,7 +16,14 @@ function NavbarComponent() {
     </Navbar.Collapse>
     </Navbar>
 
-    <Modal show={show} onHide={handleClose}/>
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+            <Modal.Title>Shopping Cart</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <h1>This is the modal body</h1>
+        </Modal.Body>
+    </Modal>
     </>
   )
 }
